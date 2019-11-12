@@ -2,7 +2,9 @@ $orange:rgb(252, 183, 49);
 $grey:rgb(109, 111, 113);
 $green1: rgb(179, 209, 67);
 $green2: rgb(100, 123, 34);
-$breakpoint-1:930px;
+$brownPicto: #c3a575;
+$bluePicto: #00afec;
+$breakpoint-1:990px;
 $breakpoint-2:600px;
 
 .container{
@@ -14,14 +16,19 @@ $breakpoint-2:600px;
     .slogan{
         color:$orange;
     }
-    .pictos .picto{
-        width:40%;
-        margin:0;
-        display:inline-block;
-    }
-    .pictos .picto img{
-        width:100px;
-        margin:20px;
+    .pictos{ 
+        display:flex;
+        flex-wrap:wrap;
+        .picto{
+            width:50%;
+            margin:0;
+            img{
+                height:100px;
+                margin-top:10px;
+                margin-bottom:10px;
+            }
+        }
+        
     }
 }
 

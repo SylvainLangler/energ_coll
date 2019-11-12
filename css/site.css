@@ -346,15 +346,22 @@ template {
   color: #fcb731;
 }
 
+.container .pictos {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .container .pictos .picto {
-  width: 40%;
+  width: 50%;
   margin: 0;
-  display: inline-block;
 }
 
 .container .pictos .picto img {
-  width: 100px;
-  margin: 20px;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .container-full {
@@ -385,9 +392,9 @@ template {
   }
 }
 
-@media (min-width: 930px) {
+@media (min-width: 990px) {
   .container {
-    max-width: 930px;
+    max-width: 990px;
     margin: 0 auto;
   }
   .container .logo-entreprise {

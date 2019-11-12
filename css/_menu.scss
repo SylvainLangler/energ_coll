@@ -2,7 +2,7 @@ $orange:rgb(252, 183, 49);
 $grey:rgb(109, 111, 113);
 $green1: rgb(179, 209, 67);
 $green2: rgb(100, 123, 34);
-$breakpoint-1:930px;
+$breakpoint-1:990px;
 
 @font-face {
     font-family: "Anton";
@@ -18,10 +18,7 @@ img{
     width:45px;
     margin-right:20px;
     margin-top:10px;
-}
-
-.hamburger-menu:active + ul{
-    display:initial;
+    margin-bottom: 10px;
 }
 
 .navbar{
@@ -31,20 +28,26 @@ img{
         padding-top:15px;
     }
     ul{
+        display:none;
         margin-top:15px;
         padding-inline-start: 0px;
-        display:none;
         clear:both;
+        margin-block-end: 0;
+        position: absolute;
+        right: 0;
+        width: 65%;
+        top: 50px;
         li{
             list-style:none;
             padding:10px;
             padding-left:40px;
-            background-color: $orange;
+            background-color: $green1;
             border: 1px solid black;
             width: 100%;
             &:hover{
                 background-color:lighten( $orange, 20% )
             }
+        
             a{
                 color: black;
                 font-size: 20px;
@@ -52,6 +55,9 @@ img{
                 width:100%;
                 font-family: "Anton";
             }
+        }
+        li:last-child{
+            background-color:$orange;
         }
     }
 }
@@ -65,18 +71,24 @@ img{
         display: flex;
         justify-content: center;
         ul{
+            position:initial;
             display:flex !important;
             margin-top:40px;
             justify-content: center;
-            background-color:$green1;
             max-width:930px;
+            margin-left:-25px;
             height:55px;
             li{
                 border:none;
-                background-color:transparent;
+                background-color:$green1;
                 width:200px;
                 padding-left:10px;
                 text-align:center;
+            }
+            li:last-child{
+                background-color: $orange;
+                position: relative;
+                left: 20px;
             }
         }
         .logo{
